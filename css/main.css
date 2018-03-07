@@ -1,0 +1,56 @@
+body {
+    margin: 0 auto;
+    font-family: Courier, monospace;
+}
+
+#rollcalc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 320px;
+    height: 280px;
+    background-color: #eeeeee;
+    align-items: flex-end;
+}
+
+.rollcalc-item {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rollcalc-title{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    width: 320px;
+}
+
+#output {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.output-text {
+    font-size: 24px;
+}
+
+.horizontal-container {
+    height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#advrollcalc {
+    background-color: red;
+    height: 280px;
+    width: 640px;
+}
+
+.advrollcalc-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
