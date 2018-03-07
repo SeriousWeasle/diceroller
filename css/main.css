@@ -10,7 +10,6 @@ body {
     width: 320px;
     height: 280px;
     background-color: #eeeeee;
-    align-items: flex-end;
 }
 
 .rollcalc-item {
@@ -53,4 +52,13 @@ body {
     font-weight: bold;
     text-align: center;
     width: 100%;
+    background-color: orange;
+}
+
+.advrollcalc-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: blue;
+    width: 320px;
 }
