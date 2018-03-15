@@ -5,7 +5,7 @@ var advrollinspiration = [];
 var advrollmisc = [];
 
 function extractInfo(form) {
-    rollinfo = [form.dice.value, form.rolltype.value, form.blessbuff.checked, form.modifier.value];
+    rollinfo = [form.dice.value, form.rolltype.value, form.blessbuff.checked, form.inspirationbuff.checked, form.modifier.value];
     console.log(rollinfo);
     rolldice();
     calculateroll();
@@ -32,6 +32,24 @@ function advroller(n, m) {
     return advresults;
 }
 
+function advrollbless() {
+    if (advrollmisc[3] = "all") {
+        if (advrollblessactive[0] = true) {
+            return advroller(advrolldiceamount[0], 4);
+        }
+    }
+}
+
+function advrolldice() {
+    d4results = advroller(advrolldiceamount[0], 4);
+    d6results = advroller(advrolldiceamount[1], 6);
+    d8results = advroller(advrolldiceamount[2], 8);
+    d10results = advroller(advrolldiceamount[3], 10);
+    d12results = advroller(advrolldiceamount[4], 12);
+    d20results = advroller(advrolldiceamount[5], 20);
+    d100results = advroller(advrolldiceamount[6], 100);
+}
+
 function roller(n) {
     return Math.ceil(Math.random() * n);
 }
@@ -42,6 +60,10 @@ function rolldice() {
 
     if (rollinfo[2] == true) {
         blessresult = roller(4);
+    }
+
+    if (rollinfo[3] == true) {
+        inspirationresult = roller(6);
     }
 }
 
@@ -70,8 +92,14 @@ function calculateroll() {
         }
     }
 
+    //Tide pods i guess. This comment was a result of a misunderstanding in a Discord call...
+
     if (typeof (blessresult) != "number") {
         blessresult = 0;
+    }
+
+    if (typeof (inspirationresult) != "number") {
+        inspirationresult = 0;
     }
 
     if (rollinfo[2] == false) {
@@ -80,9 +108,9 @@ function calculateroll() {
 
     modifier = Number(rollinfo[3]);
 
-    rolloutput = rollresult + blessresult + modifier;
+    rolloutput = rollresult + blessresult + inspirationresult + modifier;
 
-    rollresults = [rollresult, rollresult1, rollresult2, blessresult, modifier, rolloutput];
+    rollresults = [rollresult, rollresult1, rollresult2, blessresult, inspirationresult, modifier, rolloutput];
 
     document.getElementById("output").innerHTML = rolloutput;
 
