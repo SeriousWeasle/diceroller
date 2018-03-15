@@ -7,16 +7,6 @@ function extractInfo(form) {
     calculateroll();
 }
 
-function advrolldice() {
-    d4results = advroller(advrolldiceamount[0], 4);
-    d6results = advroller(advrolldiceamount[1], 6);
-    d8results = advroller(advrolldiceamount[2], 8);
-    d10results = advroller(advrolldiceamount[3], 10);
-    d12results = advroller(advrolldiceamount[4], 12);
-    d20results = advroller(advrolldiceamount[5], 20);
-    d100results = advroller(advrolldiceamount[6], 100);
-}
-
 function roller(n) {
     return Math.ceil(Math.random() * n);
 }
@@ -73,7 +63,7 @@ function calculateroll() {
         blessresult = 0;
     }
 
-    modifier = Number(rollinfo[3]);
+    modifier = Number(rollinfo[4]);
 
     rolloutput = rollresult + blessresult + inspirationresult + modifier;
 

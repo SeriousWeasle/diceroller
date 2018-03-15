@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <script src="./js/main.js"></script>
@@ -7,7 +7,11 @@
     <meta charset="utf-8" />
 </head>
 <body>
-    <div id="top-bar"></div>
-    <iframe onload="getPage(this)" src="./html/simpleroller.html" width="1280" height="720"></iframe>
+    <div id="top-bar">
+        <button onclick="changePage(pages[0])">Simple roller</button>
+        <!--<button onclick="changePage(pages[1])">Advanced roller</button>-->
+        <button onclick="changePage(pages[2])">Statblock finder</button>
+    </div>
+    <iframe src="./html/simpleroller.html" width="1280" height="720" id="main-window"></iframe>
 </body>
 </html>

@@ -1,8 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <link href="./../css/main.css" />
     <title>Weasle's statblock finder</title>
     <script src="./../js/statfinder.js"></script>
+    <script src="./../js/statdb.js"></script>
+    <meta charset="utf-8" />
+    <datalist id="creatures">
+    </datalist>
 </head>
+<body onload="createCreatureList()">
+    <form name="statfinder" id="statfinder">
+        <input list="creatures" name="creature" />
+        <input type="button" onclick="searchCreature(this.form)" value="Search" />
+    </form>
+    <div id="statblock-container"></div>
+</body>
 </html>
