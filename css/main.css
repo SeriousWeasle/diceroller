@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     font-family: Courier, monospace;
+    font-size: 16px;
 }
 
 #rollcalc {
@@ -60,5 +61,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: blue;
-    width: 320px;
+    height: 189px;
+    width: 318px;
+    border: 1px solid purple;
+}
+
+#advrollcalc-column-container {
+    display: flex;
+    flex-direction: row;
 }
