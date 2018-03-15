@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>Weasle's Dice Roller</title>
+    <link href="./../css/main.css" rel="stylesheet" />
+    <script src="./../js/rollscript.js"></script>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="vertical-container">
+        <div class="horizontal-container">
+            <form name="diceroller" id="rollcalc">
+                <div class="rollcalc-item">
+                    <div>
+                        <p class="rollcalc-title">Simple diceroller</p>
+                    </div>
+                </div>
+                <div class="rollcalc-item">
+                    Dice type<select name="dice">
+                        <option value="20">d20</option>
+                        <option value="12">d12</option>
+                        <option value="10">d10</option>
+                        <option value="8">d8</option>
+                        <option value="6">d6</option>
+                        <option value="4">d4</option>
+                        <option value="100">d100</option>
+                    </select>
+                </div>
+                <div class="rollcalc-item">
+                    Roll type<select name="rolltype">
+                        <option value="normal">Normal</option>
+                        <option value="disadvantage">Disadvantage</option>
+                        <option value="advantage">Advantage</option>
+                    </select>
+                </div>
+                <div class="rollcalc-item">
+                    Bless active<input type="checkbox" name="blessbuff" />
+                </div>
+                <div class="rollcalc-item">
+                    Inspiration active<input type="checkbox" name="inspirationbuff" />
+                </div>
+                <div class="rollcalc-item">
+                    Modifier<input type="number" name="modifier" min="-20" , max="20" value="0" />
+                </div>
+                <div class="rollcalc-item">
+                    <input type="reset" value="Clear" />
+                    <input type="button" onclick="extractInfo(this.form)" value="Roll" />
+                </div>
+                <div class="rollcalc-item">
+                    <p class="output-text">
+                        Result:
+                    </p>
+                    <p id="output">
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

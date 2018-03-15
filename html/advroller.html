@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+    <title>Weasle's Dice Roller</title>
+    <link href="./../css/main.css" rel="stylesheet" />
+    <script src="./../js/rollscript.js"></script>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <form name="advdiceroller" id="advrollcalc">
+        <div class="advrollcalc-container-vertical">
+            <p class="advrollcalc-title">Advanced diceroller</p>
+        </div>
+        <div id="advrollcalc-column-container">
+            <div class="advrollcalc-column">
+                <div class="rollcalc-item">
+                    <input type="number" name="d4amount" />d4
+                </div>
+                <div class="rollcalc-item">
+                    <input type="number" name="d6amount" />d6
+                </div>
+                <div class="rollcalc-item">
+                    <input type="number" name="d8amount" />d8
+                </div>
+                <div class="rollcalc-item">
+                    <input type="number" name="d10amount" />d10
+                </div>
+                <div class="rollcalc-item">
+                    <input type="number" name="d12amount" />d12
+                </div>
+                <div class="rollcalc-item">
+                    <input type="number" name="d20amount" />d20
+                </div>
+                <div class="rollcalc-item">
+                    <input type="number" name="d100amount" />d100
+                </div>
+            </div>
+            <div class="advrollcalc-column">
+                <div class="rollcalc-item">
+                    Modifier<input name="modifier" type="number" />
+                </div>
+                <div class="rollcalc-item">
+                    Roll type<select name="rolltype">
+                        <option value="normal">Normal</option>
+                        <option value="advantage">Advantage</option>
+                        <option value="disadvantage">Disadvantage</option>
+                        <option value="disadvantageall">Disadvantage on all</option>
+                        <option value="advantageall">Advantage on all</option>
+                    </select>
+                </div>
+                <div class="rollcalc-item">
+                    Add inspiration to:
+                    <select name="addinspiration">
+                        <option value="one">One roll</option>
+                        <option value="all">All rolls</option>
+                    </select>
+                </div>
+                <div class="rollcalc-item">
+                    d4<input type="checkbox" name="inspired4" />
+                    d6<input type="checkbox" name="inspired6" />
+                    d8<input type="checkbox" name="inspired8" />
+                    d10<input type="checkbox" name="inspired10" />
+                    d12<input type="checkbox" name="inspired12" />
+                    d20<input type="checkbox" name="inspired20" />
+                    d100<input type="checkbox" name="inspired100" />
+                </div>
+                <div class="rollcalc-item">
+                    Add bless to:
+                    <select name="addbless">
+                        <option value="one">One roll</option>
+                        <option value="all">All rolls</option>
+                    </select>
+                </div>
+                <div class="rollcalc-item">
+                    d4<input type="checkbox" name="blessd4" />
+                    d6<input type="checkbox" name="blessd6" />
+                    d8<input type="checkbox" name="blessd8" />
+                    d10<input type="checkbox" name="blessd10" />
+                    d12<input type="checkbox" name="blessd12" />
+                    d20<input type="checkbox" name="blessd20" />
+                    d100<input type="checkbox" name="blessd100" />
+                </div>
+                <div class="rollcalc-item">
+                    Output type<select name="outputtype">
+                        <option value="raw">Raw rolls</option>
+                        <option value="raw+total">Raw and total value</option>
+                        <option value="grouped">Raw grouped</option>
+                        <option value="grouped-total">Total grouped</option>
+                        <option value="total">Total</option>
+                    </select>
+                </div>
+                <div class="rollcalc-item"></div>
+                <div class="rollcalc-item">
+                    <input type="reset" value="Clear" />
+                    <input type="button" onclick="extractAdvInfo(this.form)" value="Roll" />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
